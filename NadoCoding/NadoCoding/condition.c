@@ -34,18 +34,18 @@ int main(void)
 	//	printf("성인 입니다.");
 	//}
 	
-	for (int i = 1; i <= 10; i++)
-	{
-		if (i >= 6 && i <= 10)
-		{
-			if (i == 7)
-			{
-				printf("%d번 학생은 결석 입니다.\n", i);
-				continue; //break은 loof를 벗어남 //continue는 건너띄고 다음으로
-			}
-			printf("%d번 학생은 발표하세요.\n", i);
+	//for (int i = 1; i <= 10; i++)
+	//{
+	//	if (i >= 6 && i <= 10)
+	//	{
+	//		if (i == 7)
+	//		{
+	//			printf("%d번 학생은 결석 입니다.\n", i);
+	//			continue; //break은 loof를 벗어남 //continue는 건너띄고 다음으로
+	//		}
+	//		printf("%d번 학생은 발표하세요.\n", i);
 
-		}
-	}
+	//	}
+	//}
 	return 0;
 }
