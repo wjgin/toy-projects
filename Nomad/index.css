@@ -1,0 +1,12 @@
+body{
+    background-color:#cd853f;
+}
+
+h1{
+    color:rgb(255, 255, 255);
+}
+
+/* class 생성 */
+.clicked{
+    color:violet;
+}
