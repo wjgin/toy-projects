@@ -48,13 +48,33 @@ init();
 
 const CLICKED_TITLE = "clicked";
 
+// 이 방법은 기존에 다른 CLASS가 있으면 기존 CLASS가 지워짐.
+/*
 function changeTitleColor(){
     const CURRENT_COLOR = title.className;
-    if(CURRENT_COLOR !== "clicked"){
-        title.className = "clicked";
+    if(CURRENT_COLOR !== CLICKED_TITLE){
+        title.className = CLICKED_TITLE;
     }else{
         title.className = "";
     }
+}
+*/
+
+// classList를 이용해보자
+/*
+function changeTitleColor(){
+    const HAS_CLASS = title.classList.contains(CLICKED_TITLE); // 존재하면 ture
+    if(HAS_CLASS){ // true 라면
+        title.classList.remove(CLICKED_TITLE);
+    }else{
+        title.classList.add(CLICKED_TITLE);
+    }
+
+}
+*/
+// 위 방법을 toggle 함수를 이용해서 더 간단하게 만들 수 있다. 존재 여부를 판단해서 추가하는 함수
+function changeTitleColor(){
+    title.classList.toggle(CLICKED_TITLE); // 존재하면 삭제후 false 반환 존재 안하면 추가 후 true 반환 해주는 함수 와우
 }
 
 title.addEventListener("click", changeTitleColor);
