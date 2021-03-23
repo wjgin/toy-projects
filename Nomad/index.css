@@ -16,3 +16,12 @@ h1{
 .clicked{
     color:violet;
 }
+
+.form,
+.greeting{
+    display: none;
+}
+
+.showing{
+    display: block;
+} 
