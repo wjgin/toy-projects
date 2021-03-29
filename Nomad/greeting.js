@@ -11,10 +11,15 @@ function paintingName(text) {
     greeting.innerText = `Hello ${text}`;
 }
 
+function saveUser(text){
+    localStorage.setItem(USER_LS, text);
+}
+
 function handleSubmit(event){
     event.preventDefault();
     const currentValue = input.value;
     paintingName(currentValue);
+    saveUser(currentValue);
 }
 
 function askForName(){
@@ -31,6 +36,7 @@ function loadUser() {
         paintingName(currentUser);
     }
 }
+
 
 function init() {
     loadUser();
